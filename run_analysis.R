@@ -68,4 +68,5 @@ write.csv(final, file = "./data/UCI HAR Dataset/final.csv")
 final_summary<-final%>% group_by(subject_id,activity_name) %>% summarise_each(funs(mean))
 #Create a new csv with summarized data
 write.csv(final_summary, file = "./data/UCI HAR Dataset/final_mean.csv")
+write.table(final_summary, file = "./data/UCI HAR Dataset/final_mean.txt", row.name=FALSE)
 
